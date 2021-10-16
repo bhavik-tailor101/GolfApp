@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace GolfApp.Entities
 {
-    [Table("course")]
-    public class Course
+    public class Round
     {
         public int id { get; set; }
-        public String name { get; set; }
+        public DateTime date { get; set; }
+        [ForeignKey("course_id")]
+        public Course course { get; set; }
     }
 }

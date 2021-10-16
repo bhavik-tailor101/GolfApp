@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace GolfApp.DTOs
 {
-    public class GolfScore
+    public class CourseDTO
     {
-        public Dictionary<string, Dictionary<int, string>> Scores { get; set; }
+        public String CourseName { get; set; }
     }
 }

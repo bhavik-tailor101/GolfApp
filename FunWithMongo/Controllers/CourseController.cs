@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using GolfApp.DTOs;
 using GolfApp.Entities;
 using GolfApp.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -24,6 +25,12 @@ namespace GolfApp.Controllers
         public Course Get()
         {
             return _courseService.GetCourse();
+        }
+
+        [HttpPost]
+        public void Post([FromBody] CourseDTO course)
+        {
+            _courseService.AddCourse(course);
         }
     }
 }
